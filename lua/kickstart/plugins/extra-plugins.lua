@@ -15,11 +15,6 @@ return {
     opts = {},
   },
 
-  -- more icons
-  {
-    'nvim-tree/nvim-web-devicons',
-  },
-
   -- delete buffer
   {
     'famiu/bufdelete.nvim',
