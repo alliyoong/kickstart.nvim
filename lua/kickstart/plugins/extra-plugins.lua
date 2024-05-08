@@ -48,6 +48,11 @@ return {
       }
     end,
   },
+  -- Multi cursor
+  {
+    'mg979/vim-visual-multi',
+    branch = 'master',
+  },
 
   -- Smooth scrolling neovim plugin written in lua
   {
