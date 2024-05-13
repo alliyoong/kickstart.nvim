@@ -10,6 +10,9 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+--  Set keymap for vim-visual-multi
+-- vim.keymap.set('n', '<A-n>', '<Plug>(VM-Find-Under)')
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
