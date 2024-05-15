@@ -14,7 +14,6 @@ return {
     'numToStr/Comment.nvim',
     opts = {},
   },
-
   -- delete buffer
   {
     'famiu/bufdelete.nvim',
@@ -65,6 +64,23 @@ return {
         cursor_scrolls_alone = true,
       }
     end,
+  },
+
+  -- Pop up cmd line
+  {
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      'MunifTanjim/nui.nvim',
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      'rcarriga/nvim-notify',
+    },
   },
 
   -- find and replace

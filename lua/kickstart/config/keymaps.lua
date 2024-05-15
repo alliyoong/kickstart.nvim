@@ -17,6 +17,13 @@
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Paste without overwriting register
+vim.keymap.set('v', 'p', '"_dP')
+
+-- Stay in indent mode
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('v', '<', '<gv')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -50,11 +57,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Dismiss noice notification
+-- vim.keymap.set('n', '<leader>nd', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice message' })
+
 -- Resize buffer
--- vim.keymap.set('n', '<C-S-Up>', '10<C-w>+', { desc = 'Increase buffer height by 10' })
--- vim.keymap.set('n', '<C-S-Down>', '10<C-w>-', { desc = 'Decrease buffer height by 10' })
--- vim.keymap.set('n', '<C-S-Right>', '10<C-w>>', { desc = 'Increase buffer width by 10' })
--- vim.keymap.set('n', '<C-S-Left>', '10<C-w><', { desc = 'Decrease buffer width by 10' })
+vim.keymap.set('n', '<C-S-i>', ':resize +2<CR>', { desc = 'Increase buffer height by 2' })
+vim.keymap.set('n', '<C-S-k>', ':resize -2<CR>', { desc = 'Decrease buffer height by 2' })
+vim.keymap.set('n', '<C-S-j>', ':vertical resize -2<CR>', { desc = 'Increase buffer width by 2' })
+vim.keymap.set('n', '<C-S-l>', ':vertical resize +2<CR>', { desc = 'Decrease buffer width by 2' })
 -- vim.keymap.set('n', '<leader>ae', '<C-w>=', { desc = 'Equalize width and height of all buffer' })
 
 -- Disable diagnostic message
