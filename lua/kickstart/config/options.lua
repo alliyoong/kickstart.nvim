@@ -6,7 +6,9 @@ vim.g.have_nerd_font = true -- set to true if Nerd Font installed and selected i
 vim.g.loaded_netrw = 1 -- disable netrw
 vim.g.loaded_netrwPlugin = 1 --  disable netrw
 
-vim.g.vimwiki_list = { { path = 'F:/myVimWiki/', path_html = 'F:/myVimWiki/html/' } }
+vim.g.vimwiki_list = { { path = 'F:/myVimWiki/', path_html = 'F:/myVimWiki/html/' } } -- setup root folder for vimwiki
+
+-- vim.o.shell = vim.fn.executable 'pwsh' and 'pwsh' or 'powershell' -- something related to mason fail to install lsp
 
 vim.opt.incsearch = true -- make search act like search in modern browsers
 vim.opt.backup = false -- creates a backup file
